@@ -53,12 +53,13 @@ let delimitMate_offByDefault = 1
 "----------------------------------------------------------------------
 " gutentags
 "----------------------------------------------------------------------
+" Notice that, the keymap is <leader>gg
 let $GTAGSLABEL = 'native-pygments'
 let g:gutentags_project_root = ['.root', '.svn', '.git']
 let g:gutentags_ctags_tagfile = '.tags'
 
-" let g:gutentags_modules = ['ctags', 'gtags_cscope']
-let g:gutentags_modules = ['gtags_cscope']
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
+" let g:gutentags_modules = ['gtags_cscope']
 if exists('g:gutentags_cache_dir') == 0
 	let g:gutentags_cache_dir = expand('~/.cache/tags')
 endif
@@ -67,15 +68,15 @@ if !isdirectory(g:gutentags_cache_dir)
 	call mkdir(g:gutentags_cache_dir, 'p')
 endif
 
-" let g:gutentags_ctags_extra_args = []
-" let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-" let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
-" let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+let g:gutentags_ctags_extra_args = []
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_define_advanced_commands = 1
 
-" let g:gutentags_define_advanced_commands = 1
+let g:gutentags_define_advanced_commands = 1
 
 " if has('win32') || has('win16') || has('win64') || has('win95')
 " 	let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']

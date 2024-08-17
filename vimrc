@@ -1,9 +1,7 @@
 source ~/.vim/init.vim
 
-let g:bundle_group = ['basic', 'huge', 'cpp', 'rust', 'python']
+let g:bundle_group = ['basic', 'huge', 'cpp', 'rust']
 source ~/.vim/bundle.vim
-
-colorscheme tokyonight
 
 hi VimwikiHeader1 guifg=#D79921
 hi VimwikiHeader2 guifg=#689D6A

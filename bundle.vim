@@ -20,7 +20,6 @@ call plug#begin('~/.vim/bundles')
 if has_key(s:enabled, 'basic')
 
     Plug 'mhinz/vim-startify'
-    Plug 'ghifarit53/tokyonight-vim'
     Plug 'easymotion/vim-easymotion'
 
     Plug 'editorconfig/editorconfig-vim'
@@ -56,12 +55,12 @@ if has_key(s:enabled, 'basic')
     let g:deoplete#enable_at_startup = 1
 
 	let g:gutentags_modules = []
-	" if executable('ctags')
-	" 	let g:gutentags_modules += ['ctags']
-	" endif
-	if executable('gtags-cscope') && executable('gtags')
-		let g:gutentags_modules += ['gtags_cscope']
+	if executable('ctags')
+		let g:gutentags_modules += ['ctags']
 	endif
+	" if executable('gtags-cscope') && executable('gtags')
+	" 	let g:gutentags_modules += ['gtags_cscope']
+	" endif
 	if len(g:gutentags_modules) > 0
 		" Plug 'ludovicchabant/vim-gutentags'
 		Plug 'skywind3000/vim-gutentags'
@@ -152,7 +151,7 @@ if has_key(s:enabled, 'huge')
 		Plug 'tacahiroy/ctrlp-funky'
 		let g:ctrlp_map = ''
 		noremap <c-p> :cclose<cr>:CtrlP<cr>
-		noremap <c-n> :cclose<cr>:CtrlPMRUFiles<cr>
+		" noremap <c-n> :cclose<cr>:CtrlPMRUFiles<cr>
 		noremap <m-p> :cclose<cr>:CtrlPFunky<cr>
 		noremap <m-n> :cclose<cr>:CtrlPBuffer<cr>
 	endif
