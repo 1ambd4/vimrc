@@ -29,3 +29,4 @@ let g:NERDTreeHijackNetrw = 0
 noremap <space>tn :NERDTree<cr>
 noremap <space>to :NERDTreeFocus<cr>
 noremap <space>tt :NERDTreeToggle<cr>
+noremap <c-n>     :NERDTreeToggle<cr>

@@ -3,6 +3,7 @@
 "----------------------------------------------------------------------
 set nocompatible
 
+set clipboard=unnamedplus
 set autoindent
 set smartindent
 
@@ -51,7 +52,7 @@ set showcmd
 set noshowmode
 set cmdheight=1
 
-" colorscheme nord
+colorscheme habamax
 
 set tags=./tags;,tags
 
@@ -60,10 +61,10 @@ set tags=./tags;,tags
 " map CTRL_HJKL to move cursor in all mode
 " config terminal bind <backspace> to ASCII code 127
 "----------------------------------------------------------------------
-noremap <C-h> <left>
-noremap <C-j> <down>
-noremap <C-k> <up>
-noremap <C-l> <right>
+" noremap <C-h> <left>
+" noremap <C-j> <down>
+" noremap <C-k> <up>
+" noremap <C-l> <right>
 inoremap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
@@ -103,10 +104,16 @@ set matchtime=3
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
 
 " window management
-noremap <tab>h <c-w>h
-noremap <tab>j <c-w>j
-noremap <tab>k <c-w>k
-noremap <tab>l <c-w>l
+noremap <c-h> <c-w>h
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+noremap <c-l> <c-w>l
+" noremap <leader>z :tab split<cr>
+noremap <silent>\ts :tab split<cr>
+" noremap <tab>h <c-w>h
+" noremap <tab>j <c-w>j
+" noremap <tab>k <c-w>k
+" noremap <tab>l <c-w>l
 noremap <tab>w <c-w>w
 noremap <tab>c <c-w>c
 noremap <tab>+ <c-w>+

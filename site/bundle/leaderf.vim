@@ -3,7 +3,7 @@
 "----------------------------------------------------------------------
 let g:Lf_ShortcutF = '<c-p>'
 let g:Lf_ShortcutB = '<m-n>'
-noremap <c-n> :cclose<cr>:Leaderf --nowrap mru --regexMode<cr>
+" noremap <c-n> :cclose<cr>:Leaderf --nowrap mru --regexMode<cr>
 noremap <m-p> :cclose<cr>:Leaderf! --nowrap function<cr>
 noremap <m-P> :cclose<cr>:Leaderf! --nowrap buftag<cr>
 noremap <m-n> :cclose<cr>:Leaderf! --nowrap buffer<cr>
